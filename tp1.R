@@ -4,7 +4,7 @@
 #Définition de l'espace de travail
 #####################################################################################################################################################
 
-setwd("E:/R/TP1") # Répertoire de travail
+setwd(":E/R/TP1") # Répertoire de travail
 x<-read.table("fev.txt",header=T) # Importation des données
 
 #####################################################################################################################################################
@@ -150,12 +150,12 @@ prop.table(table(Sex)) # proportion de filles et de garçons : F=0.486 M=0.514
 #Représentation graphique du sexe des enfants
 #--------------------------------------------
 
-barplot(prop.table(table(Sex)),main="Répartition du sexe des enfants",xlab="Genre",ylab="Effectifs", col=c("pink","skyblue")) # Histogramme du genre des enfants
+barplot(prop.table(table(Sex)),main="Répartition du sexe des enfants",xlab="Genre",ylab="Effectifs", col=c("pink","blue")) # Histogramme du genre des enfants
 freq_sex <- as.numeric(table(Sex)) # Changement du type afin d'avoir une fréquence
-text(x = barplot(main="Répartition du sexe des enfants",freq_sex,ylim=c(0,400),xlab="Genre",ylab="Effectifs", col=c("pink","skyblue"), names.arg=c("Femme","Homme")),y=freq_sex, label=freq_sex, pos = 3,cex = 0.8, col ="red") # Permet de rajouter les effectifs en rouge sur les colonnes
+text(x = barplot(main="Répartition du sexe des enfants",freq_sex,ylim=c(0,400),xlab="Genre",ylab="Effectifs", col=c("pink","blue"), names.arg=c("Femme","Homme")),y=freq_sex, label=freq_sex, pos = 3,cex = 0.8, col ="red") # Permet de rajouter les effectifs en rouge sur les colonnes
 sexpie <- paste(round(prop.table(table(Sex)),4)*100,"%")
 pie(prop.table(table(Sex)),main="Répartition du sexe des enfants",label=sexpie, col=c("pink","skyblue")) # Camembert des proportions garçon/fille"
-legend("topright", c("Femme","Homme"),cex=0.8,fill=c("pink","skyblue"))
+legend("topright", c("Femme","Homme"),cex=0.8,fill=c("pink","blue"))
 
 # Il y a légèrement plus de garçons que de filles. 
 
