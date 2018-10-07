@@ -4,7 +4,7 @@
 #Définition de l'espace de travail
 #####################################################################################################################################################
 
-setwd(":E/R/TP1") # Répertoire de travail
+setwd("E:/R/TP1") # Répertoire de travail
 x<-read.table("fev.txt",header=T) # Importation des données
 
 #####################################################################################################################################################
@@ -154,7 +154,7 @@ barplot(prop.table(table(Sex)),main="Répartition du sexe des enfants",xlab="Genr
 freq_sex <- as.numeric(table(Sex)) # Changement du type afin d'avoir une fréquence
 text(x = barplot(main="Répartition du sexe des enfants",freq_sex,ylim=c(0,400),xlab="Genre",ylab="Effectifs", col=c("pink","blue"), names.arg=c("Femme","Homme")),y=freq_sex, label=freq_sex, pos = 3,cex = 0.8, col ="red") # Permet de rajouter les effectifs en rouge sur les colonnes
 sexpie <- paste(round(prop.table(table(Sex)),4)*100,"%")
-pie(prop.table(table(Sex)),main="Répartition du sexe des enfants",label=sexpie, col=c("pink","skyblue")) # Camembert des proportions garçon/fille"
+pie(prop.table(table(Sex)),main="Répartition du sexe des enfants",label=sexpie, col=c("pink","blue")) # Camembert des proportions garçon/fille"
 legend("topright", c("Femme","Homme"),cex=0.8,fill=c("pink","blue"))
 
 # Il y a légèrement plus de garçons que de filles. 
