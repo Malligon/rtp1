@@ -645,7 +645,7 @@ cor.test(taille,FEV,alternative="greater",method="pearson",conf.level=.95,data=x
 # La p-valeur est inférieure à 2.2e-16 et donc inférieure à 5%. Au niveau 5%, et même 1%, la taille et la capacité pulmonaire évoluent dans le même sens
 # et sont corrélées linéairement.
 
-# Fin, le 03/10/2018.
+# Fin, le 07/10/2018.
 
 
 
